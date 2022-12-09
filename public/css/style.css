@@ -104,18 +104,52 @@ main article{
         margin: 0 2% 0 2%;
 }
 
-main .first{
-        margin-top: 28vh;
+/* grid */
+
+.gridParent{
+    display: grid;
+    grid-template-columns: repeat(7, 160px);
+    grid-template-rows: repeat(10, 100px);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;   
 }
 
-main .second{
-        margin-top: 18vh;
+.first{
+    grid-area: 4 / 2 / 7 / 3;
 }
 
-main .third{
-        margin-top: 8vh;
+.second{
+    grid-area: 3 / 4 / 6 / 5;
+}
+
+.third{
+    grid-area: 2 / 6 / 5 / 7;
 }
 
 /*########################
         Footer
 ########################*/
+
+@media screen and ( max-width: 1000px ) {
+    header img{
+        top: 2%;
+        left: 4%;
+    };
+
+    body{
+        overflow: scroll;
+    }
+
+    .bck{
+        display: none;
+    }
+
+    .gridParent{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 100px;
+        height: 200vh;
+    }
+
+}
